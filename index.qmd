@@ -1,0 +1,12 @@
+---
+title: "Un peu de mathématiques"
+---
+
+On entend trop souvent dire que les chiffres ne mentiraient pas ! Si c'est une habitude dans les discours politiques, la crise de la COVID a mis en avant son utilisation à but de démonstration dans un débat scientifique sur-médiatisé où beaucoup - experts ou non - ont voulu prendre partie.
+
+L'objectivité est ici illusoire, il suffit de penser au verre à moitié rempli, certains le verront à moitié vide, et d'autres deux fois trop grand. Le choix de présenter certains chiffres en en taisant d'autres, et la façon de les interpréter sont autant d'étapes subjectives. C'est exactement ce qu'aimerait cacher celui qui prononce l'expression "les chiffres ne mentent pas !" L'argument d'autorité évitant toute contradiction.
+
+En mathématiques, au lycée, l'utilisation des nombres est souvent objectivée car détachée de toute réalité. Le choix de l'exercice fixe un cadre se concentrant sur un objet abstrait que l'on exploite à l'aide d'ensembles de définitions et règles, rien d'autre n'existe. Le but pour de futurs scientifiques consiste à glisser tranquillement vers un usage raisonné des mathématiques dans des contextes concrets.
+
+Cela passe par une compréhension des limites des outils en connaissant leur définition tout en comprenant leur sens pour savoir reconnaître les situations.
+

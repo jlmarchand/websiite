@@ -1,0 +1,8 @@
+---
+title: "Théorie des probabilités" 
+---
+
+Cette théorie, souvent motivée dans un premier temps par les jeux d'argent reposant sur le hasard permet de mieux cerner des situations où il semble impossible de déterminer l'issue d'une expérience avant qu'elle ne se termine. L'exemple parlant consiste à considérer un lancer de dé : on pourra tenter de lancer plusieurs fois,  de façon pratiquement identique, un dé, la valeur obtenue n'est pas tout le temps la même. 
+
+
+Le but consiste pour nous de cerner les grands enjeux de cette théorie, et notamment en quoi les variables aléatoires constituent le socle naturellement commun avec les études statistiques pour la compréhension du monde qui nous entoure. La variable la plus utilisée dans les premières approches en statistique est la la variable de loi normale. Ainsi, notre histoire démarre avec les dés et doit aboutir à cette loi omniprésente.
