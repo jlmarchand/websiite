@@ -18,9 +18,15 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install packages (optionnel)
+      - name: Install system dependencies
         run: |
-          Rscript -e 'install.packages(c("tidyverse", "ggplot2", "dplyr"), repos = "https://cloud.r-project.org")'
+          sudo apt-get update
+          sudo apt-get install -y libpoppler-cpp-dev build-essential tcl tk
+
+      - name: Install R packages
+        run: |
+          Rscript -e 'install.packages("remotes", repos = "https://cloud.r-project.org")'
+          Rscript -e 'remotes::install_cran(c("kableExtra", "rmarkdown", "knitr", "quarto", "plotly", "pdftools", "Rcpp", "tidyverse", "FactoMineR"))'
 
       - name: Render site
         run: quarto render
@@ -29,4 +35,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  # ou ./docs si tu utilises docs
+          publish_dir: ./_site
