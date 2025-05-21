@@ -19,6 +19,6 @@ Quand on parle de mesure d'importance, on peut faire le lien avec celle qu'on co
 $$\textrm{Proportion de personnes gauchères} = \frac{\textrm{Nombre de personnes gauchères}}{\textrm{Nombre total de personnes dans la population de référence}}$$
 L'idée de population de référence est primordiale, c'est l'idée qui va motiver la façon de considérer les probabilités dites conditionnelles. Un exemple qui parle à tout le monde : les élections ! Les campagnes éléectorales s'appuient de plus en plus sur des chiffres censés être objectifs. La défense consiste la plupart du temps à présenter le chiffre que l'on croit être vrai et qui contredit son adversaire. La vérité réside parfois dans le fait que deux proportions ne sont pas exprimées dans un même référentiel. De la même façon, les résultats sont souvent critiqués car une personne élue à tout juste la majorité des suffrages n'est pas suffisamment représentatif de la population. Prenons pour exemple les dernières présidentielles de 2022 (Source :  <https://www.archives-resultats-elections.interieur.gouv.fr/resultats/presidentielle-2022/FE.php>)
 
-
+aa
 
 
