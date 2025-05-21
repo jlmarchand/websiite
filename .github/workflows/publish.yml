@@ -2,8 +2,9 @@ name: Publish Quarto Website
 
 on:
   push:
-    branches: [main]
-
+    branches:
+      - master
+      
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
@@ -26,7 +27,7 @@ jobs:
       - name: Install R packages
         run: |
           Rscript -e 'install.packages("remotes", repos = "https://cloud.r-project.org")'
-          Rscript -e 'remotes::install_cran(c("kableExtra", "rmarkdown", "knitr", "quarto", "plotly", "pdftools", "Rcpp", "tidyverse", "FactoMineR"))'
+          Rscript -e 'install:packages(c("kableExtra", "rmarkdown", "knitr", "quarto", "plotly", "pdftools", "Rcpp", "tidyverse", "FactoMineR", "htmltools"))'
 
       - name: Render site
         run: quarto render
