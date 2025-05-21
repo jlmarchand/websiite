@@ -1,0 +1,46 @@
+---
+title: "3D Dice Roller"
+format: html
+page-layout: full
+---
+
+## 🎲 Interactive 3D Dice Roller
+
+<div id="dice-container" style="width: 100%; height: 400px;"></div>
+
+<button id="throw-btn" style="display:block; margin: 20px auto; padding: 10px 20px; font-size: 1.2em;">
+  Throw Dice
+</button>
+
+<!-- Load external libraries -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/zz85/dice-thrower@main/dist/dice.min.js"></script>
+
+<script>
+let diceBox;
+
+function initDice() {
+  const container = document.getElementById("dice-container");
+
+  diceBox = new Dice.DiceBox(container, {
+    w: container.clientWidth,
+    h: 400,
+    scale: 100,
+    theme: "default"
+  });
+
+  diceBox.drawSelector();
+}
+
+function throwDice3D() {
+  if (!diceBox) return;
+  diceBox.clear();
+  diceBox.roll([1], true);
+}
+
+window.addEventListener("load", () => {
+  initDice();
+  document.getElementById("throw-btn").addEventListener("click", throwDice3D);
+});
+</script>

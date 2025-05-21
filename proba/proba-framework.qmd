@@ -1,0 +1,24 @@
+---
+title: "Cadre mathématique"
+---
+
+# Qu'est-ce qu'une probabilité ?
+ 
+En réalité, pour être plus précis il faudrait reformuler la question par 
+> *qu'est-ce que la probabilité d'un événement*
+
+car c'est souvent ce à quoi on fait réellement référence dans le langage courant. Cette ambiguité est au coeur du formalisme rigoureux que nous allons introduire ici. Pour une expérience donnée, une première idée que l'on peut se faire :
+
+- une **issue** est un résultat possible de l'expérience
+- l'**univers** est l'ensemble toutes les issues possibles
+- un **événement** est une collection d'issues possibles
+- la **probabilité d'un événement** est une mesure d'importance de l'événement compris entre 0 et 1
+- par conséquent, la **probabilité** est une fonction !
+
+Quand on parle de mesure d'importance, on peut faire le lien avec celle qu'on connaît le mieux : la proportion ! C'est souvent le premier exemple, le premier point d'entrée dans cette théorie. Pour reprendre l'idée de départ, la proportion permet de comparer deux quantités et de quantifier cette comparaison. Par exemple quand on regarde la proportion de personnes gauchères dans une population donnée, la proportion est donnée par le rapport des deux tailles de population :
+$$\textrm{Proportion de personnes gauchères} = \frac{\textrm{Nombre de personnes gauchères}}{\textrm{Nombre total de personnes dans la population de référence}}$$
+L'idée de population de référence est primordiale, c'est l'idée qui va motiver la façon de considérer les probabilités dites conditionnelles. Un exemple qui parle à tout le monde : les élections ! Les campagnes éléectorales s'appuient de plus en plus sur des chiffres censés être objectifs. La défense consiste la plupart du temps à présenter le chiffre que l'on croit être vrai et qui contredit son adversaire. La vérité réside parfois dans le fait que deux proportions ne sont pas exprimées dans un même référentiel. De la même façon, les résultats sont souvent critiqués car une personne élue à tout juste la majorité des suffrages n'est pas suffisamment représentatif de la population. Prenons pour exemple les dernières présidentielles de 2022 (Source :  <https://www.archives-resultats-elections.interieur.gouv.fr/resultats/presidentielle-2022/FE.php>)
+
+aa
+
+
