@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Un peu de mathématiques – Miam miam les mathématiques</title>
+<title>Division, rapport et proportion – Miam miam les mathématiques</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d68e90293d38cd02d99f563ded2214b9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d68e90293d38cd02d99f563ded2214b9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,10 +68,42 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="custom.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../custom.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
@@ -80,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Miam miam les mathématiques</span>
     </a>
   </div>
@@ -91,11 +124,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">A propos</span></a>
   </li>  
 </ul>
@@ -109,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rappels/basics-summary.html">Rappels ?</a></li><li class="breadcrumb-item"><a href="../rappels/basics-proportion.html">Proportions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -131,13 +164,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./rappels/basics-summary.html" class="sidebar-item-text sidebar-link">
+            <a href="../rappels/basics-summary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Rappels ?</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -146,13 +179,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./rappels/basics-proportion.html" class="sidebar-item-text sidebar-link">
+  <a href="../rappels/basics-proportion.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Proportions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./rappels/basics-power.html" class="sidebar-item-text sidebar-link">
+  <a href="../rappels/basics-power.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Puissances</span></a>
   </div>
 </li>
@@ -160,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./proba/proba-summary.html" class="sidebar-item-text sidebar-link">
+            <a href="../proba/proba-summary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Théorie des probabilités</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -169,13 +202,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./proba/proba-framework.html" class="sidebar-item-text sidebar-link">
+  <a href="../proba/proba-framework.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cadre mathématique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./proba/proba-rand_var.html" class="sidebar-item-text sidebar-link">
+  <a href="../proba/proba-rand_var.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variables aléatoires</span></a>
   </div>
 </li>
@@ -186,15 +219,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#la-base-les-gâteaux" id="toc-la-base-les-gâteaux" class="nav-link" data-scroll-target="#la-base-les-gâteaux">La base : les gâteaux !</a></li>
+  <li><a href="#linverse" id="toc-linverse" class="nav-link" data-scroll-target="#linverse">L’inverse</a></li>
+  <li><a href="#en-résumé" id="toc-en-résumé" class="nav-link" data-scroll-target="#en-résumé">En résumé <iconify-icon role="img" inline="" icon="game-icons:full-pizza" aria-label="Icon full-pizza from game-icons Iconify.design set." title="Icon full-pizza from game-icons Iconify.design set."></iconify-icon></a></li>
+  <li><a href="#pour-sentraîner" id="toc-pour-sentraîner" class="nav-link" data-scroll-target="#pour-sentraîner">Pour s’entraîner</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../rappels/basics-summary.html">Rappels ?</a></li><li class="breadcrumb-item"><a href="../rappels/basics-proportion.html">Proportions</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Un peu de mathématiques</h1>
+<h1 class="title">Division, rapport et proportion</h1>
 </div>
 
 
@@ -211,12 +254,142 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>On entend trop souvent dire que les chiffres ne mentiraient pas ! Si c’est une habitude dans les discours politiques, la crise de la COVID a mis en avant son utilisation à but de démonstration dans un débat scientifique sur-médiatisé où beaucoup - experts ou non - ont voulu prendre partie.</p>
-<p>L’objectivité est ici illusoire, il suffit de penser au verre à moitié rempli, certains le verront à moitié vide, et d’autres deux fois trop grand. Le choix de présenter certains chiffres en en taisant d’autres, et la façon de les interpréter sont autant d’étapes subjectives. C’est exactement ce qu’aimerait cacher celui qui prononce l’expression “les chiffres ne mentent pas !” L’argument d’autorité évitant toute contradiction.</p>
-<p>En mathématiques, au lycée, l’utilisation des nombres est souvent objectivée car détachée de toute réalité. Le choix de l’exercice fixe un cadre se concentrant sur un objet abstrait que l’on exploite à l’aide d’ensembles de définitions et règles, rien d’autre n’existe. Le but pour de futurs scientifiques consiste à glisser tranquillement vers un usage raisonné des mathématiques dans des contextes concrets.</p>
-<p>Cela passe par une compréhension des limites des outils en connaissant leur définition tout en comprenant leur sens pour savoir reconnaître les situations.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>La proportionnalité rythme tout le collège et le lycée :</p>
+<ol type="1">
+<li>définition des fractions comme le rapport de deux entiers dans un premier temps, puis avec des réels</li>
+<li>étude et calcul d’un rapport de proportionnalité à l’aide du produit en croix, ce qui aboutit aux pourcentages notamment</li>
+<li>définition du nombre <span class="math inline">\(\pi\)</span> comme le <strong>rapport constant</strong> entre le diamètre d’un cercle et son diamètre</li>
+<li>le Théorème de Thalès qui établit un rapport constant entre longueurs de triangles possédant les mêmes mesures d’angle</li>
+<li>la trigonométrie, conséquence du Théorème de Thalès, avec la formule “SOH CAH TOA” (ou “CAH SOH TOA” suivant les écoles)</li>
+<li>définition de la vitesse étudiée en mathématiques et en physique établie comme le rapport de la distance sur le temps</li>
+<li>l’étude des fonctions réelles linéaires et affines, notion de coefficient directeur</li>
+<li>approximation affine des fonctions réelles, tangente, taux d’accroissement, nombre dérivée, équation de la tangente, étude des variations</li>
+<li>probabilités et statistiques, à travers les fréquences et moyennes, etc.</li>
+</ol>
+</section>
+<section id="la-base-les-gâteaux" class="level1">
+<h1>La base : les gâteaux !</h1>
+<p>Une fois passée la fausse impression d’être infantilisé avec ce retour aux sources, c’est sans doute le moment de s’apercevoir que tout part de là ! Les formules de calcul peuvent toutes être retrouvées à travers cet exemple simple. Ce qui signifie que dans le doute, on pourra se vérifier sur sa connaissance des formules si déjà elles sont valides dans ces cas d’école. Les formules restent vraies dans n’importe quel cas !</p>
+<p>Dans un premier temps, considérons la part d’un tout, en l’occurence un gâteau. Dans l’hypothèse où l’on peut couper en parts égales, pour comparer deux parts issues de coupage différents, on subdivise alors le gâteau en parts plus fines pour que les deux parts qui nous intéressent correspondent à un certain nombre de ces parts plus fines :</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="basics-proportion_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Ce principe contient l’essence de toutes les règles de calcul</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Règles de calcul sur les fractions">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Règles de calcul sur les fractions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<ul>
+<li>quand on subdivise le gâteaux, on subidivise de la même façon les parts, cela fournit
+<ul>
+<li>le principe de <strong>simplification</strong> <span class="math display">\[\frac{a\times b}{c\times b}=\frac ac\]</span></li>
+<li>celui du <strong>produit</strong> entre fractions <span class="math display">\[\frac ab \times \frac cd=\frac{a\times c}{b\times d}\]</span></li>
+</ul></li>
+<li>quand on <strong>additionne</strong>, il faut pouvoir comparer les parts <span class="math display">\[\frac ab + \frac cd=\frac{a\times d}{ b\times d}+\frac{b\times c}{b\times d}=\frac{ad+bc}{bd}\]</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="linverse" class="level1">
+<h1>L’inverse</h1>
+<div class="alert alert-warning">
+<blockquote class="blockquote">
+<p>Définition : l’inverse d’un nombre réel non-nul <span class="math inline">\(a\)</span>, noté <span class="math inline">\(a^{-1}\)</span> ou <span class="math inline">\(\tfrac 1a\)</span> est l’unique nombre réel tel que <span class="math display">\[a\times a^{-1}=a^{-1}\times a=1\]</span></p>
+</blockquote>
+</div>
+<p>Par exemple l’inverse de 2 est <span class="math inline">\(\tfrac12\)</span>. Par conséquent, on retrouve la règle de calcul :</p>
+<blockquote class="blockquote">
+<p><em>diviser par un nombre, c’est multiplier par son inverse !</em></p>
+</blockquote>
+<p>La boucle est bouclée ! On peut ainsi généraliser toutes les règles de calculs pour des fractions de nombres réels.</p>
+</section>
+<section id="en-résumé" class="level1">
+<h1>En résumé <iconify-icon role="img" inline="" icon="game-icons:full-pizza" aria-label="Icon full-pizza from game-icons Iconify.design set." title="Icon full-pizza from game-icons Iconify.design set."></iconify-icon></h1>
+<p>Pourquoi ça marche ? Quelle est l’origine de toutes les formules ?</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A(Découpage régulier) --&gt; B(Redécoupage) 
+  B --&gt; C(Simplification)
+  B --&gt; D(Mise au même dénominateur)
+  D --&gt; E(Addition)
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Les formules en pratique</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Formulaire">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Formulaire
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>produit</strong> <span class="math display">\[\dfrac{a}{b}\times \dfrac{c}{d} = \dfrac{a\times c}{b\times d}\]</span></li>
+<li><strong>addition</strong> <span class="math display">\[\dfrac ab + \dfrac cd=\dfrac{a\times d}{ b\times d}+\dfrac{b\times c}{b\times d}=\dfrac{ad+bc}{bd}\]</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="pour-sentraîner" class="level1">
+<h1>Pour s’entraîner</h1>
+<div class="spaced-list">
+<ol type="1">
+<li>Calculer : <span class="math inline">\(\dfrac{6 \times 4}{8 \times 3}\)</span></li>
+<li>Simplifier : <span class="math inline">\(\dfrac{15 \times 12}{10 \times 9}\)</span></li>
+<li>Réduire et donner le résultat : <span class="math inline">\(\dfrac{7 \times 5 \times 2}{14 \times 5}\)</span></li>
+<li>Évaluer : <span class="math inline">\(\dfrac{3 \times 8 \times 10}{6 \times 4 \times 5}\)</span></li>
+<li>Calculer : <span class="math inline">\(\dfrac{\frac{3}{4}}{\frac{5}{6}}\)</span></li>
+<li>Simplifier : <span class="math inline">\(\dfrac{\frac{7}{10}}{\frac{14}{25}}\)</span></li>
+<li>Réduire : <span class="math inline">\(\dfrac{\frac{2}{3} + \frac{1}{6}}{\frac{5}{6}}\)</span></li>
+<li>Calculer : <span class="math inline">\(\dfrac{1 - \frac{1}{2}}{\frac{3}{4}}\)</span></li>
+<li>Calculer : <span class="math inline">\(\dfrac{2\sqrt{3}}{4\sqrt{6}}\)</span></li>
+<li>Simplifier : <span class="math inline">\(\dfrac{5}{\sqrt{2}}\)</span></li>
+<li>Rationaliser et simplifier : <span class="math inline">\(\dfrac{3}{2 + \sqrt{5}}\)</span></li>
+<li>Réduire : <span class="math inline">\(\dfrac{\sqrt{2} + \sqrt{3}}{\sqrt{2} - \sqrt{3}}\)</span></li>
+<li>Simplifier : <span class="math inline">\(\dfrac{a^2 b}{a b^2}\)</span></li>
+<li>Réduire : <span class="math inline">\(\dfrac{x^2 - 4}{x + 2}\)</span></li>
+<li>Factoriser et simplifier : <span class="math inline">\(\dfrac{x^2 - y^2}{x - y}\)</span></li>
+<li>Calculer : <span class="math inline">\(\dfrac{m^2 - 9}{m + 3}\)</span></li>
+<li>Réduire : <span class="math inline">\(\dfrac{p^2 + 2p + 1}{p + 1}\)</span></li>
+<li>Simplifier : <span class="math inline">\(\dfrac{2r^2s}{4rs^2}\)</span></li>
+<li>Factoriser puis simplifier : <span class="math inline">\(\dfrac{t^2 - 2t + 1}{t - 1}\)</span></li>
+</ol>
+</div>
+<p>On pourra reprendre les bases et s’exercer à l’adresse suivante :</p>
+<p><a href="https://fr.khanacademy.org/math/arithmetic/fraction-arithmetic" class="uri">https://fr.khanacademy.org/math/arithmetic/fraction-arithmetic</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

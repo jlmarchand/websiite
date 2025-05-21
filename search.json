@@ -1,0 +1,92 @@
+[
+  {
+    "objectID": "rappels/basics-summary.html",
+    "href": "rappels/basics-summary.html",
+    "title": "Rappels sur le programme du secondaire",
+    "section": "",
+    "text": "Le fait de ne pas avoir pris la Spécialité Mathématiques en Terminale n’est pas une fatalité. Pour aborder sereinement la suite, différents points sont repris ici à toute fin utile. Il ne faut pas hésiter à reprendre les bases abordées au collège.",
+    "crumbs": [
+      "Home",
+      "Rappels ?"
+    ]
+  },
+  {
+    "objectID": "rappels/basics-power.html",
+    "href": "rappels/basics-power.html",
+    "title": "Puissances entières et rationnelles",
+    "section": "",
+    "text": "Introduction\nL’exponentielle et le logarithme sont deux fonctions indispensables pour un scientifique. Afin de mieux comprendre en quoi elles le sont, il faut maîtriser les calculs sur les puissances mais surtout leur sens.\n\n\nPuissances entières naturelles\nC’est la situation initiale, où la définition est limpide.\n\n\nDéfinition : soit \\(n\\) un entier naturel non-nul, et \\(a\\) un nombre réel, alors le nombre réel \\(a^n\\) est défini comme le produit de \\(n\\) facteurs tous égaux à \\(a\\) :\n\\[\na^n = \\underbrace{a\\times a\\times\\dots\\times a\\times a}_{n\\textrm{ fois}}\n\\]\n\n\nPar exemple, le carré et le cube assez classiques\n\\[\n\\begin{array}{lllll}\n3^2 = 3\\times 3 =9\\\\\n\\pi^3 = \\pi\\times\\pi\\times\\pi \\simeq 31,006\n\\end{array}\n\\]\nCette représentation de la puissance ne fonctionne que pour des entiers naturels non-nuls ! De là, on déduit les **règles de calculs sur les puissances**.\n\n\nPropriété : soit \\(n,m\\in\\mathbb N^*\\), et \\(a,b\\in\\mathbb R\\), alors \\[\\begin{array}{l}a^na^m&=a^{n+m}\\\\(a^n)^m &= a^{nm}\\\\a^nb^n&=(ab)^n\\end{array}\\]\n\n\n\n\n\n\n\n\nDémonstration\n\n\n\n\n\n\npour le premier résultat\n\\[\\begin{array}{l}\na^na^m&=\\underbrace{a\\times a\\times\\dots\\times a\\times a}_{n\\textrm{ fois}}\\times\\underbrace{a\\times a\\times\\dots\\times a\\times a}_{m\\textrm{ fois}}\\\\\n&=\\underbrace{a\\times a\\times\\dots\\times a\\times a\\times a\\times a\\times\\dots\\times a\\times a}_{n+m\\textrm{ fois}}\\\\\n&=a^{n+m},\n\\end{array}\n\\]\npour le second \\[\\begin{array}{l}\n(a^n)^m&=\\underbrace{a^n\\times a^n\\times\\dots\\times a^n\\times a^n}_{m\\textrm{ fois}} \\\\\n&= \\underbrace{\\underbrace{a\\times a\\times\\dots\\times a\\times a}_{n\\textrm{ fois}}\\times \\dots \\times \\underbrace{a\\times a\\times\\dots\\times a\\times a}_{n\\textrm{ fois}}}_{m \\textrm{ fois}}\\\\\n&= a^{nm}\\end{array},\\]\nenfin, pour le dernier on réordonne les facteurs \\[ \\begin{array}{l}a^nb^n&=\\underbrace{a\\times a\\times\\dots\\times a}_{n\\textrm{ fois}}\\times \\underbrace{b\\times b\\times\\dots\\times b}_{n\\textrm{ fois}}\\\\&=\\underbrace{(a\\times b)\\times (a\\times b)\\times\\dots\\times(a\\times b)}_{n\\textrm{ fois}}&=(ab)^n.\\end{array}\\]\n\n\n\n\nCes règles sont fondamentales pour comprendre comment les autres types de puissances sont définis. Jusqu’à l’exponentielle, l’obsession consiste à garantir que chaque choix de définition permet de rester compatible avec ces règles de calculs :\n\nle produit de deux puissances d’un même nombre est égal à la puissance de ce même nombre où l’exposant est obtenu en additionnant les deux exposants\nla puissance d’une puissance d’un nombre donné est égal à la puissance de ce même nombre où l’exposant est obtenu en multipliant les deux exposants\n\nCela signifie évidemment qu’il n’y a pas réellement de nouvelles formules à part les définitions.\n\n\nPuissances entières relatives\nIci, on cherche à étendre la notion de puissance, au sens où les règles de calculs restent valides. Tout repose sur l’écriture de l’inverse d’un nombre \\[a^{-1}=\\frac1a.\\] En effet, partant du constat que si \\(m\\geq n\\), \\[\\begin{array}{l}\n\\displaystyle\\frac{a^n}{a^n}=1\\\\\n\\displaystyle\\frac{a^m}{a^n}=\\frac{\\overbrace{a\\times a\\times\\dots\\times a}^{n\\textrm{ fois}}\\times \\overbrace{a\\times a\\times\\dots\\times a}^{m-n\\textrm{ fois}}}{\\underbrace{a\\times a\\times\\dots\\times a}_{n \\textrm{ fois}}}= \\overbrace{a\\times a\\times\\dots\\times a}^{m-n\\textrm{ fois}} = a^{m-n}\\\\\n\\displaystyle\\frac{a^n}{a^m}=\\frac{\\overbrace{a\\times a\\times\\dots\\times a}^{n \\textrm{ fois}}}{\\underbrace{a\\times a\\times\\dots\\times a}_{n\\textrm{ fois}}\\times \\underbrace{a\\times a\\times\\dots\\times a}_{m-n\\textrm{ fois}}}= \\frac{1}{\\underbrace{a\\times a\\times\\dots\\times a}_{m-n\\textrm{ fois}}} =\\frac{1}{ a^{m-n}}\n\\end{array}\\]\nAinsi, le bon choix à faire est le suivant : ::: {.alert .alert-warning } &gt; Définition : pour \\(n\\in\\mathbb Z^*,\\) le nombre \\(a^{-n}\\) est l’inverse de \\(a^n\\), par convention, on pose \\(a^0=1.\\) Ainsi pour \\(a\\in\\mathbb R^*\\) et \\(m,n\\in\\mathbb Z\\) \\[\\begin{array}{l}a^{-n}= \\frac{1}{a^n}= \\left(\\frac{1}{a}\\right)^n=(a^{-1})^n\\\\\\displaystyle \\frac{a^m}{a^n}=a^{m-n}=\\frac{1}{a^{n-m}}\\end{array}\\]\n:::\nL’information primordiale à retenir, c’est ce lien entre puissance négative et inverse de la puissance positive. Par exemple : \\[\\begin{array}{l}\\displaystyle\\, 2^{-3}&=\\frac{1}{2^3}=\\frac{1}{8}\\\\\\frac{6^7}{3^94^2}&=\\frac{2^73^7}{2^43^9}=2^{3}3^{-2}= \\frac{8}{9}\\end{array}\\]\n\n\nPuissances rationnelles\nToujours dans la même obsession, le choix retenu pour les puissances rationnelles doit rester compatible avec les règles de calcul. Prenons l’exemple de la puissance \\(\\tfrac12\\), Souvent on retient que cela correspond à la racine carrée, c’est important de se souvenir pourquoi.\nPour rappel,\n\n\nDéfinition : pour tout réel positif \\(a\\), le nombre \\(\\sqrt a\\) est l’unique réel positif qui élevé au carré donne \\(a\\) \\[\\sqrt{a}^2=a\\]\n\n\nCette définition est à mettre en lien avec la courbe de la fonction carrée\n\n\nPour s’entraîner\n\n\nCalculer : \\(3^4\\)\nCalculer : \\(5^2 \\times 5^3\\)\nCalculer : \\((2^3)^2\\)\nCalculer : \\(\\left( \\frac{4^2}{2^3} \\right)^2\\)\nCalculer : \\(7^1 \\times 7^2 \\times 7^3\\)\nCalculer : \\(2^{-3}\\)\nCalculer : \\(5^{-1} \\times 5^4\\)\nCalculer : \\(\\left( \\frac{3}{4} \\right)^{-2}\\)\nCalculer : \\(\\left(2^{-2}\\right)^3\\)\nCalculer : \\(10^0 + 10^{-1}\\)\nCalculer : \\(9^{1/2}\\)\nCalculer : \\(27^{1/3}\\)\nCalculer : \\(16^{3/4}\\)\nCalculer : \\(\\left( \\frac{1}{8} \\right)^{2/3}\\)\nCalculer : \\(81^{-1/2}\\)\nSimplifier : \\(x^3 \\cdot x^4\\)\nSimplifier : \\(\\dfrac{a^5}{a^2}\\)\nSimplifier : \\((b^{-2})^3\\)\nSimplifier : \\(\\left( \\dfrac{c^3}{c^{-1}} \\right)^2\\)\nSimplifier : \\((d^{1/2} \\cdot d^{1/3})\\)\nSimplifier : \\(\\left( \\dfrac{1}{e^{2/5}} \\right)^3\\)\nSimplifier : \\((f^{-1})^{3/2}\\)\n\n\nOn pourra également consulter les sources suivantes : - https://fr.khanacademy.org/math/algebra-basics/alg-basics-expressions-with-exponents - https://fr.khanacademy.org/math/3eme-annee-secondaire/xd903d14ae2b1276e:algebre-puissances-et-racines/xd903d14ae2b1276e:hors-programme-une-racine-est-une-puissance-a-exposant-fractionnaire/v/rewriting-roots-as-rational-exponents",
+    "crumbs": [
+      "Home",
+      "Rappels ?",
+      "Puissances"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "A propos",
+    "section": "",
+    "text": "Ce site est en premier lieu destiné aux étudiants du cursus Ingénieur en Alimentation de l’Institut Agro https://www.institut-agro-rennes-angers.fr/formation/ingenieurs/ingenieur-en-alimentation.\nTous les points du cours sont rappelés, avec de nouveaux exemples et illustrations. Afin de donner de la profondeur aux notions abordées, des compléments sont fournis pour éveiller votre curiosité.\n\n\n\nJean-Louis Marchand, PRAG à l’Institut Agro Rennes/Angers, Campus de Rennes depuis 2019."
+  },
+  {
+    "objectID": "proba/proba-summary.html",
+    "href": "proba/proba-summary.html",
+    "title": "Théorie des probabilités",
+    "section": "",
+    "text": "Cette théorie, souvent motivée dans un premier temps par les jeux d’argent reposant sur le hasard permet de mieux cerner des situations où il semble impossible de déterminer l’issue d’une expérience avant qu’elle ne se termine. L’exemple parlant consiste à considérer un lancer de dé : on pourra tenter de lancer plusieurs fois, de façon pratiquement identique, un dé, la valeur obtenue n’est pas tout le temps la même.\nLe but consiste pour nous de cerner les grands enjeux de cette théorie, et notamment en quoi les variables aléatoires constituent le socle naturellement commun avec les études statistiques pour la compréhension du monde qui nous entoure. La variable la plus utilisée dans les premières approches en statistique est la la variable de loi normale. Ainsi, notre histoire démarre avec les dés et doit aboutir à cette loi omniprésente.",
+    "crumbs": [
+      "Home",
+      "Théorie des probabilités"
+    ]
+  },
+  {
+    "objectID": "proba/proba-framework.html",
+    "href": "proba/proba-framework.html",
+    "title": "Cadre mathématique",
+    "section": "",
+    "text": "Qu’est-ce qu’une probabilité ?\nEn réalité, pour être plus précis il faudrait reformuler la question par &gt; qu’est-ce que la probabilité d’un événement\ncar c’est souvent ce à quoi on fait réellement référence dans le langage courant. Cette ambiguité est au coeur du formalisme rigoureux que nous allons introduire ici. Pour une expérience donnée, une première idée que l’on peut se faire :\n\nune issue est un résultat possible de l’expérience\nl’univers est l’ensemble toutes les issues possibles\nun événement est une collection d’issues possibles\nla probabilité d’un événement est une mesure d’importance de l’événement compris entre 0 et 1\npar conséquent, la probabilité est une fonction !\n\nQuand on parle de mesure d’importance, on peut faire le lien avec celle qu’on connaît le mieux : la proportion ! C’est souvent le premier exemple, le premier point d’entrée dans cette théorie. Pour reprendre l’idée de départ, la proportion permet de comparer deux quantités et de quantifier cette comparaison. Par exemple quand on regarde la proportion de personnes gauchères dans une population donnée, la proportion est donnée par le rapport des deux tailles de population : \\[\\textrm{Proportion de personnes gauchères} = \\frac{\\textrm{Nombre de personnes gauchères}}{\\textrm{Nombre total de personnes dans la population de référence}}\\] L’idée de population de référence est primordiale, c’est l’idée qui va motiver la façon de considérer les probabilités dites conditionnelles. Un exemple qui parle à tout le monde : les élections ! Les campagnes éléectorales s’appuient de plus en plus sur des chiffres censés être objectifs. La défense consiste la plupart du temps à présenter le chiffre que l’on croit être vrai et qui contredit son adversaire. La vérité réside parfois dans le fait que deux proportions ne sont pas exprimées dans un même référentiel. De la même façon, les résultats sont souvent critiqués car une personne élue à tout juste la majorité des suffrages n’est pas suffisamment représentatif de la population. Prenons pour exemple les dernières présidentielles de 2022 (Source : https://www.archives-resultats-elections.interieur.gouv.fr/resultats/presidentielle-2022/FE.php)",
+    "crumbs": [
+      "Home",
+      "Théorie des probabilités",
+      "Cadre mathématique"
+    ]
+  },
+  {
+    "objectID": "proba/dice.html",
+    "href": "proba/dice.html",
+    "title": "3D Dice Roller",
+    "section": "",
+    "text": "Throw Dice"
+  },
+  {
+    "objectID": "proba/dice.html#interactive-3d-dice-roller",
+    "href": "proba/dice.html#interactive-3d-dice-roller",
+    "title": "3D Dice Roller",
+    "section": "",
+    "text": "Throw Dice"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Un peu de mathématiques",
+    "section": "",
+    "text": "On entend trop souvent dire que les chiffres ne mentiraient pas ! Si c’est une habitude dans les discours politiques, la crise de la COVID a mis en avant son utilisation à but de démonstration dans un débat scientifique sur-médiatisé où beaucoup - experts ou non - ont voulu prendre partie.\nL’objectivité est ici illusoire, il suffit de penser au verre à moitié rempli, certains le verront à moitié vide, et d’autres deux fois trop grand. Le choix de présenter certains chiffres en en taisant d’autres, et la façon de les interpréter sont autant d’étapes subjectives. C’est exactement ce qu’aimerait cacher celui qui prononce l’expression “les chiffres ne mentent pas !” L’argument d’autorité évitant toute contradiction.\nEn mathématiques, au lycée, l’utilisation des nombres est souvent objectivée car détachée de toute réalité. Le choix de l’exercice fixe un cadre se concentrant sur un objet abstrait que l’on exploite à l’aide d’ensembles de définitions et règles, rien d’autre n’existe. Le but pour de futurs scientifiques consiste à glisser tranquillement vers un usage raisonné des mathématiques dans des contextes concrets.\nCela passe par une compréhension des limites des outils en connaissant leur définition tout en comprenant leur sens pour savoir reconnaître les situations.",
+    "crumbs": [
+      "Home",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "rappels/basics-proportion.html",
+    "href": "rappels/basics-proportion.html",
+    "title": "Division, rapport et proportion",
+    "section": "",
+    "text": "Introduction\nLa proportionnalité rythme tout le collège et le lycée :\n\ndéfinition des fractions comme le rapport de deux entiers dans un premier temps, puis avec des réels\nétude et calcul d’un rapport de proportionnalité à l’aide du produit en croix, ce qui aboutit aux pourcentages notamment\ndéfinition du nombre \\(\\pi\\) comme le rapport constant entre le diamètre d’un cercle et son diamètre\nle Théorème de Thalès qui établit un rapport constant entre longueurs de triangles possédant les mêmes mesures d’angle\nla trigonométrie, conséquence du Théorème de Thalès, avec la formule “SOH CAH TOA” (ou “CAH SOH TOA” suivant les écoles)\ndéfinition de la vitesse étudiée en mathématiques et en physique établie comme le rapport de la distance sur le temps\nl’étude des fonctions réelles linéaires et affines, notion de coefficient directeur\napproximation affine des fonctions réelles, tangente, taux d’accroissement, nombre dérivée, équation de la tangente, étude des variations\nprobabilités et statistiques, à travers les fréquences et moyennes, etc.\n\n\n\nLa base : les gâteaux !\nUne fois passée la fausse impression d’être infantilisé avec ce retour aux sources, c’est sans doute le moment de s’apercevoir que tout part de là ! Les formules de calcul peuvent toutes être retrouvées à travers cet exemple simple. Ce qui signifie que dans le doute, on pourra se vérifier sur sa connaissance des formules si déjà elles sont valides dans ces cas d’école. Les formules restent vraies dans n’importe quel cas !\nDans un premier temps, considérons la part d’un tout, en l’occurence un gâteau. Dans l’hypothèse où l’on peut couper en parts égales, pour comparer deux parts issues de coupage différents, on subdivise alors le gâteau en parts plus fines pour que les deux parts qui nous intéressent correspondent à un certain nombre de ces parts plus fines :\n\n\n\n\n\n\n\n\n\nCe principe contient l’essence de toutes les règles de calcul\n\n\n\n\n\n\nRègles de calcul sur les fractions\n\n\n\n\n\n\nquand on subdivise le gâteaux, on subidivise de la même façon les parts, cela fournit\n\nle principe de simplification \\[\\frac{a\\times b}{c\\times b}=\\frac ac\\]\ncelui du produit entre fractions \\[\\frac ab \\times \\frac cd=\\frac{a\\times c}{b\\times d}\\]\n\nquand on additionne, il faut pouvoir comparer les parts \\[\\frac ab + \\frac cd=\\frac{a\\times d}{ b\\times d}+\\frac{b\\times c}{b\\times d}=\\frac{ad+bc}{bd}\\]\n\n\n\n\n\n\nL’inverse\n\n\nDéfinition : l’inverse d’un nombre réel non-nul \\(a\\), noté \\(a^{-1}\\) ou \\(\\tfrac 1a\\) est l’unique nombre réel tel que \\[a\\times a^{-1}=a^{-1}\\times a=1\\]\n\n\nPar exemple l’inverse de 2 est \\(\\tfrac12\\). Par conséquent, on retrouve la règle de calcul :\n\ndiviser par un nombre, c’est multiplier par son inverse !\n\nLa boucle est bouclée ! On peut ainsi généraliser toutes les règles de calculs pour des fractions de nombres réels.\n\n\nEn résumé \nPourquoi ça marche ? Quelle est l’origine de toutes les formules ?\n\n\n\n\n\nflowchart LR\n  A(Découpage régulier) --&gt; B(Redécoupage) \n  B --&gt; C(Simplification)\n  B --&gt; D(Mise au même dénominateur)\n  D --&gt; E(Addition)\n\n\n\n\n\n\nLes formules en pratique\n\n\n\n\n\n\nFormulaire\n\n\n\n\n\n\nproduit \\[\\dfrac{a}{b}\\times \\dfrac{c}{d} = \\dfrac{a\\times c}{b\\times d}\\]\naddition \\[\\dfrac ab + \\dfrac cd=\\dfrac{a\\times d}{ b\\times d}+\\dfrac{b\\times c}{b\\times d}=\\dfrac{ad+bc}{bd}\\]\n\n\n\n\n\n\nPour s’entraîner\n\n\nCalculer : \\(\\dfrac{6 \\times 4}{8 \\times 3}\\)\nSimplifier : \\(\\dfrac{15 \\times 12}{10 \\times 9}\\)\nRéduire et donner le résultat : \\(\\dfrac{7 \\times 5 \\times 2}{14 \\times 5}\\)\nÉvaluer : \\(\\dfrac{3 \\times 8 \\times 10}{6 \\times 4 \\times 5}\\)\nCalculer : \\(\\dfrac{\\frac{3}{4}}{\\frac{5}{6}}\\)\nSimplifier : \\(\\dfrac{\\frac{7}{10}}{\\frac{14}{25}}\\)\nRéduire : \\(\\dfrac{\\frac{2}{3} + \\frac{1}{6}}{\\frac{5}{6}}\\)\nCalculer : \\(\\dfrac{1 - \\frac{1}{2}}{\\frac{3}{4}}\\)\nCalculer : \\(\\dfrac{2\\sqrt{3}}{4\\sqrt{6}}\\)\nSimplifier : \\(\\dfrac{5}{\\sqrt{2}}\\)\nRationaliser et simplifier : \\(\\dfrac{3}{2 + \\sqrt{5}}\\)\nRéduire : \\(\\dfrac{\\sqrt{2} + \\sqrt{3}}{\\sqrt{2} - \\sqrt{3}}\\)\nSimplifier : \\(\\dfrac{a^2 b}{a b^2}\\)\nRéduire : \\(\\dfrac{x^2 - 4}{x + 2}\\)\nFactoriser et simplifier : \\(\\dfrac{x^2 - y^2}{x - y}\\)\nCalculer : \\(\\dfrac{m^2 - 9}{m + 3}\\)\nRéduire : \\(\\dfrac{p^2 + 2p + 1}{p + 1}\\)\nSimplifier : \\(\\dfrac{2r^2s}{4rs^2}\\)\nFactoriser puis simplifier : \\(\\dfrac{t^2 - 2t + 1}{t - 1}\\)\n\n\nOn pourra reprendre les bases et s’exercer à l’adresse suivante :\nhttps://fr.khanacademy.org/math/arithmetic/fraction-arithmetic",
+    "crumbs": [
+      "Home",
+      "Rappels ?",
+      "Proportions"
+    ]
+  }
+]
